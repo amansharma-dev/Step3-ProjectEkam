@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Step3-ProjectEkam</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="send_to_second_activity">Send To Second Activity</string>
+    <string name="review">Review</string>
+    <string name="data_from_main_activity">Data From Main Activity</string>
+    <string name="comment">Comment</string>
+    <string name="comment_here">Comment Here</string>
+    <string name="go_back_to_main_activity">Go Back To Main Activity</string>
 </resources>
