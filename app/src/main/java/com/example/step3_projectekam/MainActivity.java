@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,13 +34,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
+    protected void onStart() {
+        super.onStart();
+        Log.d("LIFECYCLE", "onStart: ");
+    }
 
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("LIFECYCLE", "onPause: ");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("LIFECYCLE", "onResume: ");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("LIFECYCLE", "onStop: ");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("LIFECYCLE", "onDestroy: ");
+    }
+
+    @Override
+    public void onClick(View view) {
         String fName = firstName.getText().toString().trim();
         String lName = lastName.getText().toString().trim();
         int uAge = Integer.parseInt(age.getText().toString().trim());
-
-
         if(!fName.isEmpty() || !lName.isEmpty()){
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
         intent.putExtra("firstName",fName);
